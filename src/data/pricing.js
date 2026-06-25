@@ -1,0 +1,92 @@
+// ============================================
+// PRICING DATA
+// ============================================
+
+export const pricingPlans = [
+  {
+    id: 1,
+    name: 'Essential',
+    tagline: 'Perfect for everyday beauty',
+    price: 999,
+    period: 'per visit',
+    color: 'silver',
+    popular: false,
+    features: [
+      'Precision Haircut & Blow Dry',
+      'Basic Face Cleanup',
+      'Eyebrow Threading',
+      'Basic Manicure or Pedicure',
+      'Complimentary Head Massage',
+      'Refreshment Included',
+    ],
+    notIncluded: [
+      'Hair Color / Treatments',
+      'Makeup Services',
+      'Nail Art',
+    ],
+    cta: 'Book Essential',
+  },
+  {
+    id: 2,
+    name: 'Luxe',
+    tagline: 'Our most popular experience',
+    price: 2499,
+    period: 'per visit',
+    color: 'gold',
+    popular: true,
+    features: [
+      'Everything in Essential',
+      'Luxury Hair Spa Treatment',
+      'Advanced Facial (60 min)',
+      'Full Nail Art (Hands + Feet)',
+      'Hair Color / Highlights',
+      'Complimentary Scalp Massage',
+      'Premium Refreshments',
+      'Priority Appointment Booking',
+    ],
+    notIncluded: [
+      'Bridal / Party Makeup',
+    ],
+    cta: 'Book Luxe',
+  },
+  {
+    id: 3,
+    name: 'Prestige',
+    tagline: 'The ultimate salon journey',
+    price: 5999,
+    period: 'per session',
+    color: 'platinum',
+    popular: false,
+    features: [
+      'Everything in Luxe',
+      'Keratin or Smoothening Treatment',
+      'Party or Event Makeup',
+      'Gel Nail Extensions',
+      'Anti-aging Facial',
+      'Exclusive Stylist Assignment',
+      'Home Visit Available',
+      'Luxury Gift Package',
+      '24/7 Priority Support',
+    ],
+    notIncluded: [],
+    cta: 'Book Prestige',
+  },
+];
+
+export const servicesPricing = [
+  { service: 'Hair Cut (Women)', price: '₹499–₹999' },
+  { service: 'Hair Cut (Men)', price: '₹299–₹499' },
+  { service: 'Hair Spa', price: '₹799–₹1,499' },
+  { service: 'Hair Color (Global)', price: '₹1,199–₹2,999' },
+  { service: 'Balayage / Highlights', price: '₹2,499–₹5,999' },
+  { service: 'Keratin Treatment', price: '₹2,499–₹4,999' },
+  { service: 'Hair Smoothening', price: '₹1,999–₹3,999' },
+  { service: 'Beard Styling', price: '₹299–₹599' },
+  { service: 'Luxury Facial', price: '₹899–₹1,999' },
+  { service: 'Face Cleanup', price: '₹399–₹699' },
+  { service: 'Bridal Makeup', price: '₹4,999–₹14,999' },
+  { service: 'Party Makeup', price: '₹1,499–₹2,999' },
+  { service: 'Nail Art', price: '₹599–₹1,499' },
+  { service: 'Manicure', price: '₹449–₹899' },
+  { service: 'Pedicure', price: '₹549–₹999' },
+];
