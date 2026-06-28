@@ -1,5 +1,5 @@
 // ============================================
-// Pricing Page — Light Theme
+// Pricing Page — Sonu Bin Salon Gold Theme
 // ============================================
 
 import { motion } from 'framer-motion';
@@ -9,20 +9,21 @@ import PricingSection from '@components/PricingSection';
 const Pricing = () => {
   return (
     <PageTransition>
-      <div className="relative pt-32 pb-16 bg-salon-alt text-center border-b border-salon-border">
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-primary text-xs tracking-[0.35em] uppercase mb-4">
-          Transparent Rates
-        </motion.p>
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-          className="font-display text-5xl sm:text-6xl font-bold text-text-primary mb-5">
-          Our{' '}
-          <span className="text-primary-gradient">
-            Pricing
-          </span>
-        </motion.h1>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-text-secondary max-w-lg mx-auto">
-          Premium quality, fair pricing. No hidden costs, ever.
-        </motion.p>
+      <div className="relative pt-32 pb-16 bg-[#111111] text-center border-b border-[#C89B3C]/10 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none" 
+          style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #C89B3C 0%, transparent 60%)' }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#C89B3C] text-xs tracking-[0.35em] uppercase mb-4">
+            Transparent Rates
+          </motion.p>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+            className="font-display text-5xl sm:text-6xl font-bold text-white mb-5">
+            Our Luxury <span className="text-primary-gradient">Pricing</span>
+          </motion.h1>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-[#777777] max-w-lg mx-auto text-sm sm:text-base leading-relaxed font-light">
+            Premium grooming packages and individual rates. Absolute quality, transparent prices, no hidden surprises.
+          </motion.p>
+        </div>
       </div>
       <PricingSection />
     </PageTransition>
