@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 /* ============================================
-   CUSTOM DESIGN TOKENS — TEAL LUXURY THEME
+   CUSTOM DESIGN TOKENS — GOLD LUXURY THEME
    ============================================ */
 @theme {
-  --color-primary: #0f766e;
-  --color-primary-light: #14b8a6;
-  --color-primary-dark: #065f46;
-  --color-salon-bg: #ffffff;
-  --color-salon-alt: #f8fffe;
+  --color-primary: #C89B3C;
+  --color-primary-light: #D4AF37;
+  --color-primary-dark: #A37B2C;
+  --color-salon-bg: #F8F8F8;
+  --color-salon-alt: #F0EDE6;
+  --color-salon-dark: #111111;
   --color-salon-card: #ffffff;
-  --color-salon-border: #e2e8f0;
-  --color-salon-input: #f1f5f9;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-muted: #94a3b8;
+  --color-salon-border: #E5E5E5;
+  --color-salon-input: #FCFCFC;
+  --color-text-primary: #111111;
+  --color-text-secondary: #333333;
+  --color-text-muted: #777777;
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 }
@@ -27,8 +28,8 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #0f172a;
+  background-color: #F8F8F8;
+  color: #333333;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,9 +39,9 @@ body {
    CUSTOM SCROLLBAR
    ============================================ */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f1f5f9; }
-::-webkit-scrollbar-thumb { background: #0f766e; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #065f46; }
+::-webkit-scrollbar-track { background: #111111; }
+::-webkit-scrollbar-thumb { background: #C89B3C; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
 
 /* ============================================
    TYPOGRAPHY UTILITIES
@@ -52,27 +53,34 @@ body {
    PRIMARY GRADIENT TEXT
    ============================================ */
 .text-primary-gradient {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background: linear-gradient(135deg, #C89B3C 0%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* ============================================
-   GLASSMORPHISM (light version)
+   GLASSMORPHISM
    ============================================ */
 .glass {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(15, 118, 110, 0.15);
+  border: 1px solid rgba(200, 155, 60, 0.15);
+}
+
+.glass-dark {
+  background: rgba(17, 17, 17, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 155, 60, 0.2);
 }
 
 /* ============================================
    BUTTON STYLES
    ============================================ */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: linear-gradient(135deg, #C89B3C 0%, #A37B2C 100%);
   color: #ffffff;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -80,18 +88,18 @@ body {
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(15, 118, 110, 0.35);
+  box-shadow: 0 12px 30px rgba(200, 155, 60, 0.35);
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 2px solid #C89B3C;
+  color: #C89B3C;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 .btn-outline:hover {
-  background: var(--color-primary);
+  background: #C89B3C;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -100,7 +108,11 @@ body {
    PRIMARY BACKGROUND GRADIENT
    ============================================ */
 .bg-primary-gradient {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: linear-gradient(135deg, #C89B3C 0%, #A37B2C 100%);
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(135deg, #111111 0%, #222222 100%);
 }
 
 /* ============================================
@@ -109,7 +121,7 @@ body {
 .primary-divider {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  background: linear-gradient(90deg, #C89B3C, #D4AF37);
   margin: 0 auto;
 }
 
@@ -117,11 +129,12 @@ body {
    CARD HOVER
    ============================================ */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(15, 118, 110, 0.12);
+  box-shadow: 0 20px 60px rgba(200, 155, 60, 0.12);
+  border-color: rgba(200, 155, 60, 0.3);
 }
 
 /* ============================================
@@ -132,7 +145,7 @@ body {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #0f766e, #14b8a6);
+  background: linear-gradient(90deg, #C89B3C, #D4AF37);
   z-index: 9999;
   transform-origin: left;
 }
@@ -141,16 +154,16 @@ body {
    SELECTION COLOR
    ============================================ */
 ::selection {
-  background: rgba(15, 118, 110, 0.2);
-  color: #0f172a;
+  background: rgba(200, 155, 60, 0.2);
+  color: #111111;
 }
 
 /* ============================================
    SWIPER CUSTOM STYLES
    ============================================ */
-.swiper-pagination-bullet { background: #0f766e !important; opacity: 0.3; }
-.swiper-pagination-bullet-active { opacity: 1 !important; background: #0f766e !important; }
-.swiper-button-next, .swiper-button-prev { color: #0f766e !important; }
+.swiper-pagination-bullet { background: #C89B3C !important; opacity: 0.3; }
+.swiper-pagination-bullet-active { opacity: 1 !important; background: #C89B3C !important; }
+.swiper-button-next, .swiper-button-prev { color: #C89B3C !important; }
 
 /* ============================================
    LOADING ANIMATIONS
@@ -160,7 +173,7 @@ body {
   100% { background-position: 200% 0; }
 }
 .shimmer {
-  background: linear-gradient(90deg, transparent 25%, rgba(15,118,110,0.1) 50%, transparent 75%);
+  background: linear-gradient(90deg, transparent 25%, rgba(200,155,60,0.1) 50%, transparent 75%);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
